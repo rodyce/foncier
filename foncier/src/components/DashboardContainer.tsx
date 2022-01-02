@@ -1,58 +1,67 @@
-import React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
+import * as React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
 import {
-  AccountCircle, Dashboard, QrCode, QrCodeScanner,
-} from '@mui/icons-material';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Feed from './Feed';
-import Leftbar from './Leftbar';
-import Navbar from './Navbar';
+  AccountCircle,
+  Dashboard,
+  QrCode,
+  QrCodeScanner,
+} from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Feed from "./Feed";
+import Leftbar from "./Leftbar";
+import Navbar from "./Navbar";
 
 const leftMenu = {
   sections: [
     {
-      sectionName: 'Section 1',
+      sectionName: "Section 1",
       buttons: [
         {
-          text: 'Home',
+          text: "Home",
           icon: <AccountCircle />,
-          path: '/',
+          path: "/",
         },
       ],
     },
     {
-      sectionName: 'Section 2',
+      sectionName: "Section 2",
       buttons: [
         {
-          text: 'Opt 1',
+          text: "Opt 1",
           icon: <Dashboard />,
-          path: '/',
+          path: "/",
         },
         {
-          text: 'Opt 2',
+          text: "Opt 2",
           icon: <QrCode />,
-          path: '/',
+          path: "/",
         },
       ],
     },
     {
-      sectionName: 'Section 3',
+      sectionName: "Section 3",
       buttons: [
         {
-          text: 'Opt 1',
+          text: "Opt 1",
           icon: <QrCodeScanner />,
-          path: '/',
+          path: "/",
         },
       ],
     },
   ],
 };
 
-function DashboardContainer({ title }) {
+type DashboardContainerProps = {
+  title: string;
+};
+
+function DashboardContainer({ title }: DashboardContainerProps) {
   const theme = useTheme();
-  const isBigScreen = useMediaQuery(theme.breakpoints.up('sm'), { noSsr: true });
+  const isBigScreen = useMediaQuery(theme.breakpoints.up("sm"), {
+    noSsr: true,
+  });
   const [open, setOpen] = React.useState(isBigScreen);
 
   const handleDrawerOpen = () => {
@@ -64,7 +73,7 @@ function DashboardContainer({ title }) {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <Navbar
         handleDrawerOpen={handleDrawerOpen}
