@@ -1,0 +1,25 @@
+package org.rodyce.foncier.datamodel.ladm.party;
+
+public enum LA_PartyRoleType {
+    BANK,
+    CLIENT,
+    LAWYER,
+    OWNER,
+    SURVEYOR,
+    CERTIFIED_SURVEYOR,
+    CITIZEN,
+    CONVEYOR,
+    EMPLOYEE,
+    FARMER,
+    LAND_OFFICE_ENQUIRER,
+    LAND_OFFICER,
+    LODGING_AGENT,
+    MONEY_PROVIDER,
+    NOTARY,
+    PARTY_TO_ASSOCIATION,
+    POWER_OF_ATTORNEY,
+    STATE_ADMINISTRATOR,
+    TRANSFEREE,
+    TRANSFEROR,
+    WRITER
+}
